@@ -26,7 +26,7 @@ namespace Busco
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<BuscoContext>(dco => dco.UseSqlServer("Server=.;Database=Pokemon;Integrated Security=true;"));
+            services.AddDbContext<BuscoContext>(dco => dco.UseSqlServer("Server=.;Database=Busco;Integrated Security=true;"));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

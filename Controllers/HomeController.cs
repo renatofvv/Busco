@@ -12,6 +12,13 @@ namespace Busco.Controllers
 {
     public class HomeController : Controller
     {
+
+        private readonly BuscoContext _Context;
+
+        private readonly BuscoContext _context;
+        public HomeController(BuscoContext context) {
+            _context = context;
+        }
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
