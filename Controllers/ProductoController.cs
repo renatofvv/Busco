@@ -12,8 +12,14 @@ namespace Busco.Controllers
         public ProductoController(BuscoContext context) 
         {
             _context = context;
+
         }
-    
+
+         public IActionResult Registro()
+        {
+            return View();
+        }
+
 
         public IActionResult Producto() 
         {
@@ -37,5 +43,15 @@ namespace Busco.Controllers
         {
             return View();
         }
+
+
     }
 }
+
+
+
+    
+
+        
+
+        

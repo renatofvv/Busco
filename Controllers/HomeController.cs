@@ -6,19 +6,13 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Busco.Models;
-
+using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace Busco.Controllers
 {
     public class HomeController : Controller
     {
 
-        private readonly BuscoContext _Context;
-
-        private readonly BuscoContext _context;
-        public HomeController(BuscoContext context) {
-            _context = context;
-        }
         private readonly ILogger<HomeController> _logger;
 
         public HomeController(ILogger<HomeController> logger)
@@ -32,11 +26,13 @@ namespace Busco.Controllers
             return View();
         }
 
+
         public IActionResult Privacy()
         {
             return View();
         }
 
+        
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
